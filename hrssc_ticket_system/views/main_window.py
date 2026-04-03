@@ -255,13 +255,9 @@ class NavigationPanel(QFrame):
                 background-color: #334155;
                 color: #ffffff;
             }}
-            QPushButton:selected {{
-                background-color: #3b82f6;
-                color: #ffffff;
-            }}
         """)
         
-        btn.clicked.connect(lambda: self.select_page(page_id))
+        btn.clicked.connect(lambda checked: self.select_page(page_id))
         return btn
     
     def select_page(self, page_id: str):
@@ -327,6 +323,7 @@ class DashboardWidget(QWidget):
         layout = QVBoxLayout(self)
         layout.setContentsMargins(20, 20, 20, 20)
         layout.setSpacing(20)
+        self.setStyleSheet("background-color: #f8fafc;")
         
         # 标题
         title_label = QLabel("工作台概览")
@@ -918,12 +915,18 @@ class MainWindow(QMainWindow):
     def setup_ui(self):
         self.setWindowTitle("人力资源共享服务中心工单处理系统")
         self.setMinimumSize(1280, 800)
+        self.setStyleSheet("""
+            QMainWindow {
+                background-color: #f8fafc;
+            }
+        """)
         
         # 移除默认标题栏（可选，需要配合 FramelessWindowHint）
         # self.setWindowFlags(Qt.WindowType.FramelessWindowHint)
         
         # 中央部件
         central_widget = QWidget()
+        central_widget.setStyleSheet("background-color: #f8fafc;")
         self.setCentralWidget(central_widget)
         
         main_layout = QHBoxLayout(central_widget)
@@ -937,6 +940,7 @@ class MainWindow(QMainWindow):
         
         # 右侧内容区
         content_widget = QWidget()
+        content_widget.setStyleSheet("background-color: #f8fafc;")
         content_layout = QVBoxLayout(content_widget)
         content_layout.setContentsMargins(0, 0, 0, 0)
         content_layout.setSpacing(0)
@@ -947,16 +951,22 @@ class MainWindow(QMainWindow):
         
         # 页面堆栈
         self.page_stack = QStackedWidget()
-        self.page_stack.setStyleSheet("background-color: #f8fafc;")
+        self.page_stack.setStyleSheet("""
+            QStackedWidget {
+                background-color: #f8fafc;
+            }
+        """)
         
         # 添加各页面
         self.dashboard_page = DashboardWidget()
+        self.dashboard_page.setStyleSheet("background-color: #f8fafc;")
         self.tickets_page = TicketListWidget()
+        self.tickets_page.setStyleSheet("background-color: #f8fafc;")
         self.tickets_page.ticket_selected.connect(self.show_ticket_detail)
-        self.knowledge_page = QWidget()  # 知识库页面
-        self.reports_page = QWidget()  # 报表页面
-        self.notifications_page = QWidget()  # 通知页面
-        self.admin_page = QWidget()  # 管理页面
+        self.knowledge_page = self.create_knowledge_page()
+        self.reports_page = self.create_reports_page()
+        self.notifications_page = self.create_notifications_page()
+        self.admin_page = self.create_admin_page()
         
         self.page_stack.addWidget(self.dashboard_page)
         self.page_stack.addWidget(self.tickets_page)
@@ -1057,6 +1067,7 @@ class MainWindow(QMainWindow):
     def create_ticket_placeholder(self) -> QWidget:
         """创建工单占位页面"""
         widget = QWidget()
+        widget.setStyleSheet("background-color: #f8fafc;")
         layout = QVBoxLayout(widget)
         
         label = QLabel("点击「新建工单」按钮创建新工单")
@@ -1069,6 +1080,82 @@ class MainWindow(QMainWindow):
             }
         """)
         layout.addWidget(label)
+        
+        return widget
+    
+    def create_knowledge_page(self) -> QWidget:
+        """创建知识库页面"""
+        widget = QWidget()
+        widget.setStyleSheet("background-color: #f8fafc;")
+        layout = QVBoxLayout(widget)
+        layout.setContentsMargins(20, 20, 20, 20)
+        
+        title_label = QLabel("📚 知识库")
+        title_label.setFont(QFont("Microsoft YaHei", 18, QFont.Weight.Bold))
+        title_label.setStyleSheet("color: #1e293b;")
+        layout.addWidget(title_label)
+        
+        desc_label = QLabel("知识库功能开发中...")
+        desc_label.setStyleSheet("color: #64748b; font-size: 14px;")
+        layout.addWidget(desc_label)
+        layout.addStretch()
+        
+        return widget
+    
+    def create_reports_page(self) -> QWidget:
+        """创建报表页面"""
+        widget = QWidget()
+        widget.setStyleSheet("background-color: #f8fafc;")
+        layout = QVBoxLayout(widget)
+        layout.setContentsMargins(20, 20, 20, 20)
+        
+        title_label = QLabel("📈 统计报表")
+        title_label.setFont(QFont("Microsoft YaHei", 18, QFont.Weight.Bold))
+        title_label.setStyleSheet("color: #1e293b;")
+        layout.addWidget(title_label)
+        
+        desc_label = QLabel("统计报表功能开发中...")
+        desc_label.setStyleSheet("color: #64748b; font-size: 14px;")
+        layout.addWidget(desc_label)
+        layout.addStretch()
+        
+        return widget
+    
+    def create_notifications_page(self) -> QWidget:
+        """创建通知页面"""
+        widget = QWidget()
+        widget.setStyleSheet("background-color: #f8fafc;")
+        layout = QVBoxLayout(widget)
+        layout.setContentsMargins(20, 20, 20, 20)
+        
+        title_label = QLabel("🔔 消息中心")
+        title_label.setFont(QFont("Microsoft YaHei", 18, QFont.Weight.Bold))
+        title_label.setStyleSheet("color: #1e293b;")
+        layout.addWidget(title_label)
+        
+        desc_label = QLabel("消息中心功能开发中...")
+        desc_label.setStyleSheet("color: #64748b; font-size: 14px;")
+        layout.addWidget(desc_label)
+        layout.addStretch()
+        
+        return widget
+    
+    def create_admin_page(self) -> QWidget:
+        """创建管理页面"""
+        widget = QWidget()
+        widget.setStyleSheet("background-color: #f8fafc;")
+        layout = QVBoxLayout(widget)
+        layout.setContentsMargins(20, 20, 20, 20)
+        
+        title_label = QLabel("⚙️ 系统管理")
+        title_label.setFont(QFont("Microsoft YaHei", 18, QFont.Weight.Bold))
+        title_label.setStyleSheet("color: #1e293b;")
+        layout.addWidget(title_label)
+        
+        desc_label = QLabel("系统管理功能开发中...")
+        desc_label.setStyleSheet("color: #64748b; font-size: 14px;")
+        layout.addWidget(desc_label)
+        layout.addStretch()
         
         return widget
     
