@@ -1,1 +1,19 @@
-Nothing should be ignored based on the provided file changes, as only a Python source file (`hrssc_ticket_system/views/main_window.py`) was modified without any build artifacts, dependencies, or temporary files present in the changes.
+```
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+*.env.*
+```
