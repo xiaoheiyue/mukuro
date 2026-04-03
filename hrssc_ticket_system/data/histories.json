@@ -1,0 +1,167 @@
+[
+  {
+    "id": "dd01d2b5-e600-4ae1-9ab0-9daf17e69e4f",
+    "ticket_id": "1be10f0e-01f8-4c2e-9a9e-ae934b89a32b",
+    "action_type": "CREATED",
+    "old_value": null,
+    "new_value": null,
+    "performed_by": "09c04bba-796a-44dc-a1df-aa742ca4509a",
+    "performed_by_name": "王员工",
+    "performed_at": "2026-04-03T12:06:08.263022",
+    "description": "工单 TKT-20260403120608-9F6EF5D1 已创建"
+  },
+  {
+    "id": "894b9144-e320-4f06-a005-40d242e02883",
+    "ticket_id": "1be10f0e-01f8-4c2e-9a9e-ae934b89a32b",
+    "action_type": "STATUS_CHANGED",
+    "old_value": "草稿",
+    "new_value": "已提交",
+    "performed_by": "09c04bba-796a-44dc-a1df-aa742ca4509a",
+    "performed_by_name": "王员工",
+    "performed_at": "2026-04-03T12:06:08.263416",
+    "description": "工单已提交"
+  },
+  {
+    "id": "01806634-bb7a-4b52-85ee-afaa1657c3ff",
+    "ticket_id": "1be10f0e-01f8-4c2e-9a9e-ae934b89a32b",
+    "action_type": "ASSIGNED",
+    "old_value": "未分配",
+    "new_value": "767c2983-7516-4155-a4fa-32d1300da379",
+    "performed_by": "640c6cd4-0aaa-4d9d-8371-710789ee038d",
+    "performed_by_name": "张经理",
+    "performed_at": "2026-04-03T12:06:08.264544",
+    "description": "工单已分配给 李专员"
+  },
+  {
+    "id": "10eefa38-0300-49af-bf30-4ddcb04a26e5",
+    "ticket_id": "1be10f0e-01f8-4c2e-9a9e-ae934b89a32b",
+    "action_type": "STATUS_CHANGED",
+    "old_value": "已分配",
+    "new_value": "处理中",
+    "performed_by": "767c2983-7516-4155-a4fa-32d1300da379",
+    "performed_by_name": "李专员",
+    "performed_at": "2026-04-03T12:06:08.265012",
+    "description": "状态变更为 处理中"
+  },
+  {
+    "id": "61ad87f5-02f6-4248-9ef7-b28d7adb81b5",
+    "ticket_id": "03174386-32e3-4607-b88e-312705e6dc9b",
+    "action_type": "CREATED",
+    "old_value": null,
+    "new_value": null,
+    "performed_by": "09c04bba-796a-44dc-a1df-aa742ca4509a",
+    "performed_by_name": "王员工",
+    "performed_at": "2026-04-03T12:06:08.265923",
+    "description": "工单 TKT-20260403120608-ABB592FC 已创建"
+  },
+  {
+    "id": "584fa2b0-7d57-4e6f-b44e-bd52d22e8d31",
+    "ticket_id": "03174386-32e3-4607-b88e-312705e6dc9b",
+    "action_type": "STATUS_CHANGED",
+    "old_value": "草稿",
+    "new_value": "已提交",
+    "performed_by": "09c04bba-796a-44dc-a1df-aa742ca4509a",
+    "performed_by_name": "王员工",
+    "performed_at": "2026-04-03T12:06:08.266510",
+    "description": "工单已提交"
+  },
+  {
+    "id": "69c8ca14-3cd2-4c55-9dd0-ca01e530c212",
+    "ticket_id": "03174386-32e3-4607-b88e-312705e6dc9b",
+    "action_type": "ASSIGNED",
+    "old_value": "未分配",
+    "new_value": "767c2983-7516-4155-a4fa-32d1300da379",
+    "performed_by": "640c6cd4-0aaa-4d9d-8371-710789ee038d",
+    "performed_by_name": "张经理",
+    "performed_at": "2026-04-03T12:06:08.280490",
+    "description": "工单已分配给 李专员"
+  },
+  {
+    "id": "75ce46e4-b7fa-4983-a793-12da98621c9f",
+    "ticket_id": "03174386-32e3-4607-b88e-312705e6dc9b",
+    "action_type": "STATUS_CHANGED",
+    "old_value": "已分配",
+    "new_value": "已解决",
+    "performed_by": "767c2983-7516-4155-a4fa-32d1300da379",
+    "performed_by_name": "李专员",
+    "performed_at": "2026-04-03T12:06:08.281381",
+    "description": "状态变更为 已解决"
+  },
+  {
+    "id": "7799c4a2-d82f-4e3b-8fbe-9a5b5db1b225",
+    "ticket_id": "1c4b49ff-f85b-45d8-9014-234a462e8957",
+    "action_type": "CREATED",
+    "old_value": null,
+    "new_value": null,
+    "performed_by": "09c04bba-796a-44dc-a1df-aa742ca4509a",
+    "performed_by_name": "王员工",
+    "performed_at": "2026-04-03T12:06:08.281964",
+    "description": "工单 TKT-20260403120608-40CA8F0F 已创建"
+  },
+  {
+    "id": "3879a1fd-29bf-4c22-b486-56df2ce6a0d3",
+    "ticket_id": "1c4b49ff-f85b-45d8-9014-234a462e8957",
+    "action_type": "STATUS_CHANGED",
+    "old_value": "草稿",
+    "new_value": "已提交",
+    "performed_by": "09c04bba-796a-44dc-a1df-aa742ca4509a",
+    "performed_by_name": "王员工",
+    "performed_at": "2026-04-03T12:06:08.282795",
+    "description": "工单已提交"
+  },
+  {
+    "id": "3ff89001-e945-4443-ae70-a8ee498869a6",
+    "ticket_id": "1c4b49ff-f85b-45d8-9014-234a462e8957",
+    "action_type": "ASSIGNED",
+    "old_value": "未分配",
+    "new_value": "767c2983-7516-4155-a4fa-32d1300da379",
+    "performed_by": "640c6cd4-0aaa-4d9d-8371-710789ee038d",
+    "performed_by_name": "张经理",
+    "performed_at": "2026-04-03T12:06:08.284235",
+    "description": "工单已分配给 李专员"
+  },
+  {
+    "id": "c5a7a2d3-f783-46ae-90d5-e63faea69fc2",
+    "ticket_id": "7abcdc9e-3c68-4467-9629-11ffe4985827",
+    "action_type": "CREATED",
+    "old_value": null,
+    "new_value": null,
+    "performed_by": "09c04bba-796a-44dc-a1df-aa742ca4509a",
+    "performed_by_name": "王员工",
+    "performed_at": "2026-04-03T12:06:08.285561",
+    "description": "工单 TKT-20260403120608-F58BAA9C 已创建"
+  },
+  {
+    "id": "e6fcac9f-972e-427f-8594-4ebc10834ad1",
+    "ticket_id": "7abcdc9e-3c68-4467-9629-11ffe4985827",
+    "action_type": "STATUS_CHANGED",
+    "old_value": "草稿",
+    "new_value": "已提交",
+    "performed_by": "09c04bba-796a-44dc-a1df-aa742ca4509a",
+    "performed_by_name": "王员工",
+    "performed_at": "2026-04-03T12:06:08.301028",
+    "description": "工单已提交"
+  },
+  {
+    "id": "a9c8dfc7-6472-4587-8bd9-cb4231e4702b",
+    "ticket_id": "0941ba02-29af-462e-8f99-cdb2aa9c0b94",
+    "action_type": "CREATED",
+    "old_value": null,
+    "new_value": null,
+    "performed_by": "09c04bba-796a-44dc-a1df-aa742ca4509a",
+    "performed_by_name": "王员工",
+    "performed_at": "2026-04-03T12:06:08.303251",
+    "description": "工单 TKT-20260403120608-46C5F90D 已创建"
+  },
+  {
+    "id": "05271244-5c14-4e9e-8a10-2f27a9171210",
+    "ticket_id": "0941ba02-29af-462e-8f99-cdb2aa9c0b94",
+    "action_type": "STATUS_CHANGED",
+    "old_value": "草稿",
+    "new_value": "已提交",
+    "performed_by": "09c04bba-796a-44dc-a1df-aa742ca4509a",
+    "performed_by_name": "王员工",
+    "performed_at": "2026-04-03T12:06:08.303983",
+    "description": "工单已提交"
+  }
+]
