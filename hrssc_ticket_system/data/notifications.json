@@ -1,0 +1,145 @@
+[
+  {
+    "id": "6ccda7e0-a685-4a46-a5a5-0d3ef762cd30",
+    "user_id": "640c6cd4-0aaa-4d9d-8371-710789ee038d",
+    "title": "新工单：TKT-20260403120608-9F6EF5D1",
+    "message": "新工单已提交：示例工单 1 - 招聘管理",
+    "notification_type": "TICKET_CREATED",
+    "related_ticket_id": null,
+    "is_read": false,
+    "created_at": "2026-04-03T12:06:08.263715",
+    "read_at": null
+  },
+  {
+    "id": "1a931a56-a6d9-4d7b-a256-976473270ac5",
+    "user_id": "767c2983-7516-4155-a4fa-32d1300da379",
+    "title": "新工单：TKT-20260403120608-9F6EF5D1",
+    "message": "新工单已提交：示例工单 1 - 招聘管理",
+    "notification_type": "TICKET_CREATED",
+    "related_ticket_id": null,
+    "is_read": false,
+    "created_at": "2026-04-03T12:06:08.263904",
+    "read_at": null
+  },
+  {
+    "id": "41373ab0-0499-49c7-bcd3-ef48c52cb2a2",
+    "user_id": "767c2983-7516-4155-a4fa-32d1300da379",
+    "title": "新工单分配：TKT-20260403120608-9F6EF5D1",
+    "message": "您已被分配处理工单：示例工单 1 - 招聘管理",
+    "notification_type": "TICKET_ASSIGNED",
+    "related_ticket_id": "1be10f0e-01f8-4c2e-9a9e-ae934b89a32b",
+    "is_read": false,
+    "created_at": "2026-04-03T12:06:08.264702",
+    "read_at": null
+  },
+  {
+    "id": "fde067ec-ac12-49ba-a561-1519be8e8d96",
+    "user_id": "640c6cd4-0aaa-4d9d-8371-710789ee038d",
+    "title": "新工单：TKT-20260403120608-ABB592FC",
+    "message": "新工单已提交：示例工单 2 - 入职管理",
+    "notification_type": "TICKET_CREATED",
+    "related_ticket_id": null,
+    "is_read": false,
+    "created_at": "2026-04-03T12:06:08.266756",
+    "read_at": null
+  },
+  {
+    "id": "a43c2042-fd27-4250-b826-6476712bb75e",
+    "user_id": "767c2983-7516-4155-a4fa-32d1300da379",
+    "title": "新工单：TKT-20260403120608-ABB592FC",
+    "message": "新工单已提交：示例工单 2 - 入职管理",
+    "notification_type": "TICKET_CREATED",
+    "related_ticket_id": null,
+    "is_read": false,
+    "created_at": "2026-04-03T12:06:08.279294",
+    "read_at": null
+  },
+  {
+    "id": "b8a79c15-53f6-4fba-9869-8cec876aa25c",
+    "user_id": "767c2983-7516-4155-a4fa-32d1300da379",
+    "title": "新工单分配：TKT-20260403120608-ABB592FC",
+    "message": "您已被分配处理工单：示例工单 2 - 入职管理",
+    "notification_type": "TICKET_ASSIGNED",
+    "related_ticket_id": "03174386-32e3-4607-b88e-312705e6dc9b",
+    "is_read": false,
+    "created_at": "2026-04-03T12:06:08.280836",
+    "read_at": null
+  },
+  {
+    "id": "78385bf0-6561-419c-8d45-6ac8dda3bca9",
+    "user_id": "640c6cd4-0aaa-4d9d-8371-710789ee038d",
+    "title": "新工单：TKT-20260403120608-40CA8F0F",
+    "message": "新工单已提交：示例工单 3 - 离职管理",
+    "notification_type": "TICKET_CREATED",
+    "related_ticket_id": null,
+    "is_read": false,
+    "created_at": "2026-04-03T12:06:08.283046",
+    "read_at": null
+  },
+  {
+    "id": "85610819-b0a1-43c5-a7fd-83dcb41c665d",
+    "user_id": "767c2983-7516-4155-a4fa-32d1300da379",
+    "title": "新工单：TKT-20260403120608-40CA8F0F",
+    "message": "新工单已提交：示例工单 3 - 离职管理",
+    "notification_type": "TICKET_CREATED",
+    "related_ticket_id": null,
+    "is_read": false,
+    "created_at": "2026-04-03T12:06:08.283254",
+    "read_at": null
+  },
+  {
+    "id": "6d9962b2-cd6e-48bf-bf35-305519790456",
+    "user_id": "767c2983-7516-4155-a4fa-32d1300da379",
+    "title": "新工单分配：TKT-20260403120608-40CA8F0F",
+    "message": "您已被分配处理工单：示例工单 3 - 离职管理",
+    "notification_type": "TICKET_ASSIGNED",
+    "related_ticket_id": "1c4b49ff-f85b-45d8-9014-234a462e8957",
+    "is_read": false,
+    "created_at": "2026-04-03T12:06:08.284735",
+    "read_at": null
+  },
+  {
+    "id": "9b51b218-bcc7-4188-b97a-c20ff7b43d92",
+    "user_id": "640c6cd4-0aaa-4d9d-8371-710789ee038d",
+    "title": "新工单：TKT-20260403120608-F58BAA9C",
+    "message": "新工单已提交：示例工单 4 - 薪酬福利",
+    "notification_type": "TICKET_CREATED",
+    "related_ticket_id": null,
+    "is_read": false,
+    "created_at": "2026-04-03T12:06:08.301679",
+    "read_at": null
+  },
+  {
+    "id": "e4c3ddbe-fa22-4835-95e7-ace26bad924c",
+    "user_id": "767c2983-7516-4155-a4fa-32d1300da379",
+    "title": "新工单：TKT-20260403120608-F58BAA9C",
+    "message": "新工单已提交：示例工单 4 - 薪酬福利",
+    "notification_type": "TICKET_CREATED",
+    "related_ticket_id": null,
+    "is_read": false,
+    "created_at": "2026-04-03T12:06:08.302030",
+    "read_at": null
+  },
+  {
+    "id": "222b65f1-2061-4eb3-a028-58fd6806aa3f",
+    "user_id": "640c6cd4-0aaa-4d9d-8371-710789ee038d",
+    "title": "新工单：TKT-20260403120608-46C5F90D",
+    "message": "新工单已提交：示例工单 5 - 培训发展",
+    "notification_type": "TICKET_CREATED",
+    "related_ticket_id": null,
+    "is_read": false,
+    "created_at": "2026-04-03T12:06:08.304284",
+    "read_at": null
+  },
+  {
+    "id": "f17b1963-15fa-4b4c-a79e-ca44aee72bab",
+    "user_id": "767c2983-7516-4155-a4fa-32d1300da379",
+    "title": "新工单：TKT-20260403120608-46C5F90D",
+    "message": "新工单已提交：示例工单 5 - 培训发展",
+    "notification_type": "TICKET_CREATED",
+    "related_ticket_id": null,
+    "is_read": false,
+    "created_at": "2026-04-03T12:06:08.304631",
+    "read_at": null
+  }
+]

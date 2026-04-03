@@ -1,0 +1,362 @@
+[
+  {
+    "id": "3f1b5e56-20b6-40ba-a789-96766ad23cc6",
+    "category": "招聘管理",
+    "priority": "紧急",
+    "response_time_hours": 2,
+    "resolution_time_hours": 8,
+    "escalation_time_hours": 4,
+    "is_active": true
+  },
+  {
+    "id": "498e465f-5e16-43d3-ae22-7423621fede5",
+    "category": "入职管理",
+    "priority": "紧急",
+    "response_time_hours": 2,
+    "resolution_time_hours": 8,
+    "escalation_time_hours": 4,
+    "is_active": true
+  },
+  {
+    "id": "32af2e33-a2b3-43bf-979b-dee2802d8557",
+    "category": "离职管理",
+    "priority": "紧急",
+    "response_time_hours": 2,
+    "resolution_time_hours": 8,
+    "escalation_time_hours": 4,
+    "is_active": true
+  },
+  {
+    "id": "32a251b3-957d-466f-b9c8-89d4c5f61781",
+    "category": "薪酬福利",
+    "priority": "紧急",
+    "response_time_hours": 2,
+    "resolution_time_hours": 8,
+    "escalation_time_hours": 4,
+    "is_active": true
+  },
+  {
+    "id": "0b843fe5-2152-4576-baf3-7032270f2f41",
+    "category": "培训发展",
+    "priority": "紧急",
+    "response_time_hours": 2,
+    "resolution_time_hours": 8,
+    "escalation_time_hours": 4,
+    "is_active": true
+  },
+  {
+    "id": "ce005833-d917-4d67-b5e6-3203a68d51cb",
+    "category": "绩效管理",
+    "priority": "紧急",
+    "response_time_hours": 2,
+    "resolution_time_hours": 8,
+    "escalation_time_hours": 4,
+    "is_active": true
+  },
+  {
+    "id": "c09fc638-e945-4299-b20c-8ae7e1888620",
+    "category": "员工关系",
+    "priority": "紧急",
+    "response_time_hours": 2,
+    "resolution_time_hours": 8,
+    "escalation_time_hours": 4,
+    "is_active": true
+  },
+  {
+    "id": "dcaf9992-0718-44e0-a451-d14083a8d563",
+    "category": "HR政策咨询",
+    "priority": "紧急",
+    "response_time_hours": 2,
+    "resolution_time_hours": 8,
+    "escalation_time_hours": 4,
+    "is_active": true
+  },
+  {
+    "id": "5e68568c-2030-42bf-82f3-72f75ed4d5da",
+    "category": "系统支持",
+    "priority": "紧急",
+    "response_time_hours": 2,
+    "resolution_time_hours": 8,
+    "escalation_time_hours": 4,
+    "is_active": true
+  },
+  {
+    "id": "8b27632e-894a-45d1-8604-3a4efbd8c01b",
+    "category": "其他",
+    "priority": "紧急",
+    "response_time_hours": 2,
+    "resolution_time_hours": 8,
+    "escalation_time_hours": 4,
+    "is_active": true
+  },
+  {
+    "id": "25623cdb-0b20-482e-ad7e-ca66f0cd49ac",
+    "category": "招聘管理",
+    "priority": "高",
+    "response_time_hours": 4,
+    "resolution_time_hours": 24,
+    "escalation_time_hours": 12,
+    "is_active": true
+  },
+  {
+    "id": "04446955-2e49-4f96-b1b2-4115f5ca7839",
+    "category": "入职管理",
+    "priority": "高",
+    "response_time_hours": 4,
+    "resolution_time_hours": 24,
+    "escalation_time_hours": 12,
+    "is_active": true
+  },
+  {
+    "id": "aa882429-373b-49bb-9920-94652e9c09fe",
+    "category": "离职管理",
+    "priority": "高",
+    "response_time_hours": 4,
+    "resolution_time_hours": 24,
+    "escalation_time_hours": 12,
+    "is_active": true
+  },
+  {
+    "id": "2930c83a-35f8-4a53-9655-d0f28b257f51",
+    "category": "薪酬福利",
+    "priority": "高",
+    "response_time_hours": 4,
+    "resolution_time_hours": 24,
+    "escalation_time_hours": 12,
+    "is_active": true
+  },
+  {
+    "id": "27da2ad3-5143-49de-9c2a-63180cce8f13",
+    "category": "培训发展",
+    "priority": "高",
+    "response_time_hours": 4,
+    "resolution_time_hours": 24,
+    "escalation_time_hours": 12,
+    "is_active": true
+  },
+  {
+    "id": "9763a882-438c-4ef1-8a5d-f3fef57cdcc1",
+    "category": "绩效管理",
+    "priority": "高",
+    "response_time_hours": 4,
+    "resolution_time_hours": 24,
+    "escalation_time_hours": 12,
+    "is_active": true
+  },
+  {
+    "id": "64f5e4ad-e320-4095-af7b-1bbdfbaf35f1",
+    "category": "员工关系",
+    "priority": "高",
+    "response_time_hours": 4,
+    "resolution_time_hours": 24,
+    "escalation_time_hours": 12,
+    "is_active": true
+  },
+  {
+    "id": "f75208a8-d21a-4b0c-908e-744908ca4990",
+    "category": "HR政策咨询",
+    "priority": "高",
+    "response_time_hours": 4,
+    "resolution_time_hours": 24,
+    "escalation_time_hours": 12,
+    "is_active": true
+  },
+  {
+    "id": "19508aa0-6e29-4f1f-b90f-7168b20245d8",
+    "category": "系统支持",
+    "priority": "高",
+    "response_time_hours": 4,
+    "resolution_time_hours": 24,
+    "escalation_time_hours": 12,
+    "is_active": true
+  },
+  {
+    "id": "b9a8c65d-7753-4435-a7f6-109286e2daf9",
+    "category": "其他",
+    "priority": "高",
+    "response_time_hours": 4,
+    "resolution_time_hours": 24,
+    "escalation_time_hours": 12,
+    "is_active": true
+  },
+  {
+    "id": "96765971-0c10-4c7f-8d8b-cfad79804ebb",
+    "category": "招聘管理",
+    "priority": "中",
+    "response_time_hours": 8,
+    "resolution_time_hours": 48,
+    "escalation_time_hours": 24,
+    "is_active": true
+  },
+  {
+    "id": "9a5c2609-2729-4e8c-9b53-e7a76e1b55ef",
+    "category": "入职管理",
+    "priority": "中",
+    "response_time_hours": 8,
+    "resolution_time_hours": 48,
+    "escalation_time_hours": 24,
+    "is_active": true
+  },
+  {
+    "id": "697c1c8c-c208-4682-b3df-4c012f972149",
+    "category": "离职管理",
+    "priority": "中",
+    "response_time_hours": 8,
+    "resolution_time_hours": 48,
+    "escalation_time_hours": 24,
+    "is_active": true
+  },
+  {
+    "id": "03453c68-a23c-4dfd-8873-c3d693a1ac7e",
+    "category": "薪酬福利",
+    "priority": "中",
+    "response_time_hours": 8,
+    "resolution_time_hours": 48,
+    "escalation_time_hours": 24,
+    "is_active": true
+  },
+  {
+    "id": "0013329f-f78a-4419-81b5-9703c74dca8f",
+    "category": "培训发展",
+    "priority": "中",
+    "response_time_hours": 8,
+    "resolution_time_hours": 48,
+    "escalation_time_hours": 24,
+    "is_active": true
+  },
+  {
+    "id": "02e1f11b-c580-4ae4-b66a-bdd08124f28e",
+    "category": "绩效管理",
+    "priority": "中",
+    "response_time_hours": 8,
+    "resolution_time_hours": 48,
+    "escalation_time_hours": 24,
+    "is_active": true
+  },
+  {
+    "id": "162cdfb2-681d-4a04-9958-9f5297dd1feb",
+    "category": "员工关系",
+    "priority": "中",
+    "response_time_hours": 8,
+    "resolution_time_hours": 48,
+    "escalation_time_hours": 24,
+    "is_active": true
+  },
+  {
+    "id": "96a6a3a0-0988-4f33-a732-3d9924349d05",
+    "category": "HR政策咨询",
+    "priority": "中",
+    "response_time_hours": 8,
+    "resolution_time_hours": 48,
+    "escalation_time_hours": 24,
+    "is_active": true
+  },
+  {
+    "id": "b4b1dd90-19b1-4f7b-a24c-ee81924fa674",
+    "category": "系统支持",
+    "priority": "中",
+    "response_time_hours": 8,
+    "resolution_time_hours": 48,
+    "escalation_time_hours": 24,
+    "is_active": true
+  },
+  {
+    "id": "8349471e-b033-46dd-b2b1-29033d44cf79",
+    "category": "其他",
+    "priority": "中",
+    "response_time_hours": 8,
+    "resolution_time_hours": 48,
+    "escalation_time_hours": 24,
+    "is_active": true
+  },
+  {
+    "id": "8e2be3a0-eca8-4fd8-bbf2-a8df86bbc0ef",
+    "category": "招聘管理",
+    "priority": "低",
+    "response_time_hours": 24,
+    "resolution_time_hours": 72,
+    "escalation_time_hours": 48,
+    "is_active": true
+  },
+  {
+    "id": "95a7a473-8eea-4471-bcc9-baa6799f45ac",
+    "category": "入职管理",
+    "priority": "低",
+    "response_time_hours": 24,
+    "resolution_time_hours": 72,
+    "escalation_time_hours": 48,
+    "is_active": true
+  },
+  {
+    "id": "24ed44f3-787c-4878-8c1a-9b368681b964",
+    "category": "离职管理",
+    "priority": "低",
+    "response_time_hours": 24,
+    "resolution_time_hours": 72,
+    "escalation_time_hours": 48,
+    "is_active": true
+  },
+  {
+    "id": "9867bb2f-6032-4045-a249-0bb45d499fd1",
+    "category": "薪酬福利",
+    "priority": "低",
+    "response_time_hours": 24,
+    "resolution_time_hours": 72,
+    "escalation_time_hours": 48,
+    "is_active": true
+  },
+  {
+    "id": "14e7f954-394a-48f0-a482-fe53728de607",
+    "category": "培训发展",
+    "priority": "低",
+    "response_time_hours": 24,
+    "resolution_time_hours": 72,
+    "escalation_time_hours": 48,
+    "is_active": true
+  },
+  {
+    "id": "ed20bac8-1ad3-4a40-8de4-f4e95e300e2c",
+    "category": "绩效管理",
+    "priority": "低",
+    "response_time_hours": 24,
+    "resolution_time_hours": 72,
+    "escalation_time_hours": 48,
+    "is_active": true
+  },
+  {
+    "id": "5ffc7853-ef58-40ed-abb8-a029cdb7c10a",
+    "category": "员工关系",
+    "priority": "低",
+    "response_time_hours": 24,
+    "resolution_time_hours": 72,
+    "escalation_time_hours": 48,
+    "is_active": true
+  },
+  {
+    "id": "86221940-86d7-45bd-b7c7-84d022713c4d",
+    "category": "HR政策咨询",
+    "priority": "低",
+    "response_time_hours": 24,
+    "resolution_time_hours": 72,
+    "escalation_time_hours": 48,
+    "is_active": true
+  },
+  {
+    "id": "c012289c-06f2-460e-8e28-d11ba57146c7",
+    "category": "系统支持",
+    "priority": "低",
+    "response_time_hours": 24,
+    "resolution_time_hours": 72,
+    "escalation_time_hours": 48,
+    "is_active": true
+  },
+  {
+    "id": "7b0a92fe-409a-4d92-98df-bc8e2a36fd25",
+    "category": "其他",
+    "priority": "低",
+    "response_time_hours": 24,
+    "resolution_time_hours": 72,
+    "escalation_time_hours": 48,
+    "is_active": true
+  }
+]

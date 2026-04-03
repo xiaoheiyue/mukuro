@@ -8,20 +8,20 @@ from datetime import datetime
 from typing import Optional, Dict, Any, List
 from PyQt6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QStackedWidget,
-    QMenuBar, QMenu, QAction, QToolBar, QStatusBar, QLabel,
+    QMenuBar, QMenu, QToolBar, QStatusBar, QLabel,
     QPushButton, QFrame, QSplitter, QTabWidget, QMessageBox,
     QApplication, QDialog, QDialogButtonBox, QFormLayout, QLineEdit,
     QTextEdit, QComboBox, QSpinBox, QDateEdit, QTimeEdit, QCheckBox,
     QListWidget, QListWidgetItem, QTableWidget, QTableWidgetItem,
     QHeaderView, QTreeView, QGroupBox, QScrollArea, QSizePolicy,
-    QProgressBar, QSystemTrayIcon, QMenu as QContextMenu, QActionGroup
+    QProgressBar, QSystemTrayIcon, QMenu as QContextMenu
 )
 from PyQt6.QtCore import (
     Qt, QTimer, pyqtSignal, QDate, QTime, QModelIndex, QSortFilterProxyModel
 )
 from PyQt6.QtGui import (
     QIcon, QFont, QColor, QPalette, QBrush, QPixmap, QPainter,
-    QLinearGradient, QPen, QAction as QtGuiAction
+    QLinearGradient, QPen, QAction, QActionGroup
 )
 
 from models import (
@@ -348,7 +348,8 @@ class DashboardWidget(QWidget):
         
         for key, label, icon, color in stat_configs:
             card = self.create_stat_card(label, icon, color)
-            self.stat_cards[key] = {"card": card, "value_label": card.findChild(QLabel, "value")}
+            value_label = card.findChild(QLabel, "value")
+            self.stat_cards[key] = {"card": card, "value": value_label}
             stats_layout.addWidget(card)
         
         layout.addLayout(stats_layout)
