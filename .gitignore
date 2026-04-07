@@ -1,19 +1,23 @@
 ```
-# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# IDE
-.vscode/
-.idea/
-
-# Logs
-*.log
-
-# Environment
 .env
 .env.local
-*.env.*
+.env.*
+.vscode/
+.idea/
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+dist/
+build/
+.coverage
+htmlcov/
+coverage/
+.mypy_cache/
+.pytest_cache/
 ```
