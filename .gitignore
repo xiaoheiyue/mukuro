@@ -1,1 +1,23 @@
-Nothing should be ignored in this case, as only a single Python source file (`metal_erp_platform.py`) was added without any build artifacts, dependencies, or temporary files.
+```
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.py~
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.env
+.env.local
+.env.*
+.coverage
+htmlcov/
+coverage/
+.mypy_cache/
+.pytest_cache/
+*.swp
+*.swo
+```
