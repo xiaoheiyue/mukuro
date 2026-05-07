@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage QoS Manager - Network Throughput Shaping & Quota System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>📊 Storage QoS</h1>
+                <p>Network Shaping Manager</p>
+            </div>
+            <nav class="nav-menu">
+                <button class="nav-item active" data-page="dashboard">
+                    <span class="icon">🏠</span>
+                    Dashboard
+                </button>
+                <button class="nav-item" data-page="tenants">
+                    <span class="icon">🏢</span>
+                    Tenants
+                </button>
+                <button class="nav-item" data-page="policies">
+                    <span class="icon">⚙️</span>
+                    Policies
+                </button>
+                <button class="nav-item" data-page="metrics">
+                    <span class="icon">📈</span>
+                    Metrics
+                </button>
+                <button class="nav-item" data-page="alerts">
+                    <span class="icon">🔔</span>
+                    Alerts
+                    <span class="badge" id="alertBadge">0</span>
+                </button>
+            </nav>
+            <div class="system-status">
+                <div class="status-indicator online"></div>
+                <span>System Online</span>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h2 id="pageTitle">Dashboard Overview</h2>
+                <div class="header-actions">
+                    <button class="btn btn-refresh" onclick="refreshData()">🔄 Refresh</button>
+                    <div class="timestamp" id="lastUpdate">Last update: --</div>
+                </div>
+            </header>
+
+            <!-- Dashboard Page -->
+            <div id="page-dashboard" class="page active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🏢</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="totalTenants">0</div>
+                            <div class="stat-label">Total Tenants</div>
+                        </div>
+                    </div>
+                    <div class="stat-card success">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="activeTenants">0</div>
+                            <div class="stat-label">Active</div>
+                        </div>
+                    </div>
+                    <div class="stat-card warning">
+                        <div class="stat-icon">⚠️</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="warningTenants">0</div>
+                            <div class="stat-label">Warning</div>
+                        </div>
+                    </div>
+                    <div class="stat-card info">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="overallUsage">0%</div>
+                            <div class="stat-label">Overall Usage</div>
+                        </div>
+                    </div>
+                    <div class="stat-card primary">
+                        <div class="stat-icon">🚀</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="totalThroughput">0 Mbps</div>
+                            <div class="stat-label">Total Throughput</div>
+                        </div>
+                    </div>
+                    <div class="stat-card danger">
+                        <div class="stat-icon">🔔</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="unackAlerts">0</div>
+                            <div class="stat-label">Unacknowledged Alerts</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h3>Throughput by Tenant (Mbps)</h3>
+                        <canvas id="throughputChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Quota Usage Percentage</h3>
+                        <canvas id="usageChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="table-card">
+                    <h3>Top Consumers</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Tenant</th>
+                                <th>Current Throughput (Mbps)</th>
+                                <th>Quota (Mbps)</th>
+                                <th>Usage %</th>
+                            </tr>
+                        </thead>
+                        <tbody id="topConsumersTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tenants Page -->
+            <div id="page-tenants" class="page">
+                <div class="page-header">
+                    <h3>Tenant Management</h3>
+                    <button class="btn btn-primary" onclick="showModal('tenantModal')">+ Add Tenant</button>
+                </div>
+                <div class="table-card">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Department</th>
+                                <th>Current (Mbps)</th>
+                                <th>Quota (Mbps)</th>
+                                <th>Burst Limit</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tenantsTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Policies Page -->
+            <div id="page-policies" class="page">
+                <div class="page-header">
+                    <h3>Traffic Shaping Policies</h3>
+                    <button class="btn btn-primary" onclick="showModal('policyModal')">+ Create Policy</button>
+                </div>
+                <div class="table-card">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Policy Name</th>
+                                <th>Tenant</th>
+                                <th>Min BW (Mbps)</th>
+                                <th>Max BW (Mbps)</th>
+                                <th>Burst Duration</th>
+                                <th>Priority Queue</th>
+                                <th>Algorithm</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="policiesTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Metrics Page -->
+            <div id="page-metrics" class="page">
+                <div class="page-header">
+                    <h3>Historical Metrics</h3>
+                    <select id="metricsTenantFilter" onchange="loadMetrics()">
+                        <option value="">All Tenants</option>
+                    </select>
+                </div>
+                <div class="chart-card full-width">
+                    <canvas id="metricsHistoryChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Alerts Page -->
+            <div id="page-alerts" class="page">
+                <div class="page-header">
+                    <h3>System Alerts</h3>
+                    <div class="filter-buttons">
+                        <button class="btn btn-secondary active" onclick="filterAlerts('all')">All</button>
+                        <button class="btn btn-secondary" onclick="filterAlerts('unacknowledged')">Unacknowledged</button>
+                        <button class="btn btn-secondary" onclick="filterAlerts('acknowledged')">Acknowledged</button>
+                    </div>
+                </div>
+                <div class="alerts-container" id="alertsList">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Tenant Modal -->
+    <div id="tenantModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Tenant</h3>
+                <button class="close-btn" onclick="closeModal('tenantModal')">&times;</button>
+            </div>
+            <form id="tenantForm" onsubmit="createTenant(event)">
+                <div class="form-group">
+                    <label>Tenant Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Department</label>
+                    <input type="text" name="department" required>
+                </div>
+                <div class="form-group">
+                    <label>Quota (Mbps)</label>
+                    <input type="number" name="quota_mbps" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label>Burst Limit (Mbps)</label>
+                    <input type="number" name="burst_limit_mbps" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label>Priority (1-5, 1 is highest)</label>
+                    <select name="priority">
+                        <option value="1">1 - Critical</option>
+                        <option value="2">2 - High</option>
+                        <option value="3" selected>3 - Medium</option>
+                        <option value="4">4 - Low</option>
+                        <option value="5">5 - Background</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('tenantModal')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Tenant</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Policy Modal -->
+    <div id="policyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create Traffic Shaping Policy</h3>
+                <button class="close-btn" onclick="closeModal('policyModal')">&times;</button>
+            </div>
+            <form id="policyForm" onsubmit="createPolicy(event)">
+                <div class="form-group">
+                    <label>Policy Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Tenant</label>
+                    <select name="tenant_id" id="policyTenantSelect" required>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Min Bandwidth (Mbps)</label>
+                        <input type="number" name="min_bandwidth_mbps" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Max Bandwidth (Mbps)</label>
+                        <input type="number" name="max_bandwidth_mbps" step="0.1" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Burst Duration (sec)</label>
+                        <input type="number" name="burst_duration_sec" value="30" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Priority Queue</label>
+                        <select name="priority_queue">
+                            <option value="high">High</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Shaping Algorithm</label>
+                    <select name="shaping_algorithm">
+                        <option value="token_bucket">Token Bucket</option>
+                        <option value="leaky_bucket">Leaky Bucket</option>
+                        <option value="weighted_fair">Weighted Fair Queuing</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('policyModal')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Policy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

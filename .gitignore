@@ -1,72 +1,40 @@
 ```
-# Python
+# Dependencies
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .Python
-env/
 venv/
 .venv/
-.ENV
-.ENV.local
 .env
 .env.local
 .env.*
-.venv/
-venv/
-ENV/
-env.bak/
-.venv.bak/
 
-# Generated files
+# Build artifacts
 dist/
 build/
 *.egg-info/
-.eggs/
-.sconsign.dblite
-._sconsign.dblite
-*.sconsign
-*.sconsign.*
-*.spec
-.coverage
-htmlcov/
-.coverage.*
-.nyc_output
-istanbul.out
-*.lcov
-coverage/
-.pytest_cache/
-.mypy_cache/
-.hypothesis/
 
-# IDE
+# Logs
+*.log
+
+# Editors
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
+
+# OS
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
-*.out
-*.pid
-*.seed
-*.id
-*.core
-*.mem
-*.stackdump
-core.*
+# Coverage
+.coverage
+coverage/
+htmlcov/
 
-# OS generated
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-*:*
+# Testing
+.pytest_cache/
+.mypy_cache/
 ```
